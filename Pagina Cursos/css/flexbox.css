@@ -1,0 +1,121 @@
+.headerPrincipal .container{
+   display: flex; /*al ponerlo por default los acomoda uno del lado del otro*/
+   align-items: center; /*centrar dentro del div*/
+   justify-content: space-between;/*propiedad de flex para separa elementos fles*/
+}
+
+.headerPrincipal-nav{
+    display: flex;
+}
+
+.rodapePrincipal-patrocinadores .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.rodapePrincipal-patrocinadores-list{
+    display: flex;
+    align-items: center; /*alinea con respesto a un eje x horizontal */
+    justify-content: space-around; /*espacio alredeor de elementos*/
+    width: 70%;
+    margin-right: 5%;
+}
+
+.rodapePrincipal-contatoForm{
+    width: 25%;
+}
+
+.rodapePrincipal-contatoForm-fieldset{
+    display: flex;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-direction: column; /*los elementos de un lado al otro*/
+    height: 250px;
+    flex-wrap: wrap; /*cuando llega a la altura el contenido se pasa a la siguiente comulmna*/
+}
+
+.contenidoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenidoPrincipal-cursos-link{
+    display: flex;
+    width: 23%;
+}
+
+.videoSobre .container {
+    display: flex;
+}
+
+.videoSobre-sobre{
+    display: flex;
+    text-align: center;
+    flex-direction: column ;
+}
+
+.videoSobre-sobre{
+    text-align: center;
+}
+
+.videoSobre-video{
+    flex-grow:2; /*hacer mas grande el flex dos veces a los demas*/
+    flex-shrink: 2; /*achicar dos veces */
+}
+
+.videoSobre-sobre-list{
+    flex-grow:2; /*hacer mas grande el flex*/
+}
+
+          /*Responsive */
+@media (max-width:768px){
+
+
+    .headerPrincipal .container{
+        flex-direction: column;
+        align-items: initial;/*para que los elementos ocupen todo el espacio del contenedor*/
+        text-align: center;
+    }
+
+    .headerPrincipal-nav{
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos{
+
+        flex-direction: column;
+    }
+
+    .contenidoPrincipal-cursos-link{
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list{
+        height: auto;
+        flex-wrap: nowrap;
+    }
+    .rodapePrincipal-patrocinadores .container{
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+    .rodapePrincipal-patrocinadores-list{
+        align-items: center;
+        width: 100%;
+        margin: 0;
+    }
+    .rodapePrincipal-contatoForm-fieldset{
+        justify-content: center;
+    }
+
+    .headerPrincipal-nav-link-app{
+        order: -1; /*para dejar primero este item*/
+    }
+    .videoSobre .container {
+        flex-direction: column;
+    }
+}
